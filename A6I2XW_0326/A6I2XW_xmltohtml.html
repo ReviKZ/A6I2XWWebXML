@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A6I2XW órarend</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+            padding: 28px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        th {
+            background: #1d4ed8;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-size: 13px;
+            padding: 14px 12px;
+        }
+
+        td {
+            padding: 13px 12px;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        tr:hover {
+            background: #eef4ff;
+        }
+
+        .id {
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .tipus {
+            display: inline-block;
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: #dbeafe;
+            color: #1e40af;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .online {
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .footer {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #6b7280;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>A6I2XW órarend</h1>
+        <p class="subtitle">XML dokumentumból táblázatos HTML formátumra alakítva</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Azonosító</th>
+                    <th>Típus</th>
+                    <th>Kurzus</th>
+                    <th>Nap</th>
+                    <th>Időpont</th>
+                    <th>Helyszín</th>
+                    <th>Oktató</th>
+                    <th>Szak</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="id">ora01</td>
+                    <td><span class="tipus">gyakorlat</span></td>
+                    <td>Webkönyvtárak</td>
+                    <td>03.24.</td>
+                    <td>09:00 - 12:05</td>
+                    <td class="online">-</td>
+                    <td>Dr. Patonay Anita</td>
+                    <td>Programtervező informatikus</td>
+                </tr>
+                <tr>
+                    <td class="id">ora02</td>
+                    <td><span class="tipus">elmélet</span></td>
+                    <td>Valószínűségszámítás és statisztika</td>
+                    <td>03.25.</td>
+                    <td>08:00 - 11:15</td>
+                    <td>Tanterem 116</td>
+                    <td>Kucsinka Katalin</td>
+                    <td>Programtervező informatikus</td>
+                </tr>
+                <tr>
+                    <td class="id">ora03</td>
+                    <td><span class="tipus">gyakorlat</span></td>
+                    <td>Alkalmazások fejleszése projekt labor III.</td>
+                    <td>03.26.</td>
+                    <td>10:00 - 12:55</td>
+                    <td>Informatikaterem 132</td>
+                    <td>Perlaki Attila</td>
+                    <td>Programtervező informatikus</td>
+                </tr>
+                <tr>
+                    <td class="id">ora04</td>
+                    <td><span class="tipus">gyakorlat</span></td>
+                    <td>Webkönyvtárak</td>
+                    <td>03.26.</td>
+                    <td>11:30 - 12:55</td>
+                    <td>Informatikaterem 124</td>
+                    <td>Dr. Bednarik László</td>
+                    <td>Programtervező informatikus</td>
+                </tr>
+                <tr>
+                    <td class="id">ora05</td>
+                    <td><span class="tipus">elmélet</span></td>
+                    <td>Szoftverjog és biztonságtechnika</td>
+                    <td>03.27.</td>
+                    <td>09:00 - 12:05</td>
+                    <td class="online">-</td>
+                    <td>Dr. Mileff Péter</td>
+                    <td>Programtervező informatikus</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="footer">Forrás: A6I2XW_orarend.xml</p>
+    </div>
+</body>
+</html>
