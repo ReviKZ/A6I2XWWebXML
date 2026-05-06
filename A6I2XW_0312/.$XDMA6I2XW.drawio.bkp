@@ -1,0 +1,45 @@
+<mxfile host="app.diagrams.net" modified="2026-04-24T00:00:00.000Z" agent="ChatGPT" version="24.0.0" type="device">
+  <diagram id="A6I2XW-vendeglatas" name="A6I2XW_Vendeglatas">
+    <mxGraphModel dx="1434" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="root" value="A6I2XW_Vendeglatas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vendeglok" value="vendeglok" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="alkalmazottak" value="alkalmazottak" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="270" y="150" width="190" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vendegek" value="vendegek" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="500" y="150" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="asztalok" value="asztalok" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="710" y="150" width="190" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="etelek" value="etelek" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="940" y="150" width="190" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="foglalasok" value="foglalasok" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="360" y="390" width="220" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="rendelesek" value="rendelesek" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" vertex="1" parent="1">
+          <mxGeometry x="650" y="390" width="230" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="root" target="vendeglok" style="endArrow=block;html=1;rounded=0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="root" target="alkalmazottak" style="endArrow=block;html=1;rounded=0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="root" target="vendegek" style="endArrow=block;html=1;rounded=0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="root" target="asztalok" style="endArrow=block;html=1;rounded=0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="root" target="etelek" style="endArrow=block;html=1;rounded=0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="root" target="foglalasok" style="endArrow=block;html=1;rounded=0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="root" target="rendelesek" style="endArrow=block;html=1;rounded=0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="vendeglok" target="alkalmazottak" value="vendegloRef" style="endArrow=open;html=1;dashed=1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="vendeglok" target="asztalok" value="vendegloRef" style="endArrow=open;html=1;dashed=1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="vendeglok" target="etelek" value="vendegloRef" style="endArrow=open;html=1;dashed=1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="foglalasok" target="rendelesek" value="foglalasRef" style="endArrow=open;html=1;dashed=1"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

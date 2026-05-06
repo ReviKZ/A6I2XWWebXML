@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<A6I2XW_Vendeglatas>
+    <vendeglok>
+        <vendeglo id="v01">
+            <nev>Belvárosi Bisztró</nev>
+            <cim>
+                <iranyitoszam>9021</iranyitoszam>
+                <varos>Győr</varos>
+                <utca>Fő utca 10.</utca>
+            </cim>
+            <telefon>+36-30-123-4567</telefon>
+            <email>info@belvarosibisztro.hu</email>
+			<alkalmazottak>
+				<alkalmazott id="a01">
+					<nev>Kiss Anna</nev>
+					<munkakor>felszolgáló</munkakor>
+					<belepesDatum>2024-09-01</belepesDatum>
+				</alkalmazott>
+				<alkalmazott id="a02">
+					<nev>Nagy Péter</nev>
+					<munkakor>szakács</munkakor>
+					<belepesDatum>2023-03-15</belepesDatum>
+				</alkalmazott>
+			</alkalmazottak>
+			<vendegek>
+			</vendegek>
+			<asztalok>
+				<asztal id="t01">
+					<ferohely>4</ferohely>
+					<elhelyezkedes>ablak mellett</elhelyezkedes>
+				</asztal>
+				<asztal id="t02">
+					<ferohely>2</ferohely>
+					<elhelyezkedes>terasz</elhelyezkedes>
+				</asztal>
+				<asztal id="t03">
+					<ferohely>6</ferohely>
+					<elhelyezkedes>belső terem</elhelyezkedes>
+				</asztal>
+			</asztalok>
+			<menu>
+				<etel id="e01">
+					<nev>Rántott csirkemell burgonyapürével</nev>
+					<kategoria>főétel</kategoria>
+					<ar penznem="HUF">3490</ar>
+				</etel>
+				<etel id="e02" vendegloRef="v01">
+					<nev>Házi limonádé</nev>
+					<kategoria>ital</kategoria>
+					<ar penznem="HUF">990</ar>
+				</etel>
+				<etel id="e03" vendegloRef="v02">
+					<nev>Margherita pizza</nev>
+					<kategoria>főétel</kategoria>
+					<ar penznem="HUF">2990</ar>
+				</etel>
+			</menu>
+		</vendeglo>
+		<vendeglo id="v02">
+			<nev>Duna Parti Étterem</nev>
+			<cim>
+				<iranyitoszam>9022</iranyitoszam>
+				<varos>Győr</varos>
+				<utca>Duna sétány 5.</utca>
+			</cim>
+			<telefon>+36-30-765-4321</telefon>
+			<email>foglalas@dunaparti.hu</email>
+			<alkalmazottak>
+				<alkalmazott id="a03">
+					<nev>Tóth Éva</nev>
+					<munkakor>üzletvezető</munkakor>
+					<belepesDatum>2022-11-20</belepesDatum>
+				</alkalmazott>
+			</alkalmazottak>
+			<vendegek>
+				<vendeg id="g01">
+					<nev>Horváth Dániel</nev>
+					<telefon>+36-20-111-2222</telefon>
+					<email>horvath.daniel@example.hu</email>
+				</vendeg>
+				<vendeg id="g02">
+					<nev>Molnár Réka</nev>
+					<telefon>+36-20-333-4444</telefon>
+					<email>molnar.reka@example.hu</email>
+				</vendeg>
+			</vendegek>
+			<asztalok>
+				<asztal id="t01">
+					<ferohely>3</ferohely>
+					<elhelyezkedes>privát szoba</elhelyezkedes>
+				</asztal>
+				<asztal id="t02">
+					<ferohely>10</ferohely>
+					<elhelyezkedes>dunára néző</elhelyezkedes>
+				</asztal>
+				<asztal id="t03">
+					<ferohely>2</ferohely>
+					<elhelyezkedes>VIP</elhelyezkedes>
+				</asztal>
+			</asztalok>
+			<menu>
+				<etel id="e01">
+					<nev>Csirkepörkölt</nev>
+					<kategoria>főétel</kategoria>
+					<ar penznem="HUF">2210</ar>
+				</etel>
+				<etel id="e02">
+					<nev>Sör</nev>
+					<kategoria>ital</kategoria>
+					<ar penznem="HUF">720</ar>
+				</etel>
+				<etel id="e03">
+					<nev>Somlói Galuska</nev>
+					<kategoria>desszert</kategoria>
+					<ar penznem="HUF">2600</ar>
+				</etel>
+			</menu>
+		</vendeglo>
+	</vendeglok>
+</A6I2XW_Vendeglatas>
