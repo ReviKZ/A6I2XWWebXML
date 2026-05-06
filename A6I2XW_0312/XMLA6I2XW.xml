@@ -44,12 +44,12 @@
 					<kategoria>főétel</kategoria>
 					<ar penznem="HUF">3490</ar>
 				</etel>
-				<etel id="e02" vendegloRef="v01">
+				<etel id="e02">
 					<nev>Házi limonádé</nev>
 					<kategoria>ital</kategoria>
 					<ar penznem="HUF">990</ar>
 				</etel>
-				<etel id="e03" vendegloRef="v02">
+				<etel id="e03">
 					<nev>Margherita pizza</nev>
 					<kategoria>főétel</kategoria>
 					<ar penznem="HUF">2990</ar>
