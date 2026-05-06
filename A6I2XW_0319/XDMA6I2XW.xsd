@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- ==================== SAJÁT EGYSZERŰ TÍPUSOK ==================== -->
+
+    <xs:simpleType name="idTipus">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emailTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@\s]+@[^@\s]+\.[^@\s]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="telefonTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+?[0-9 ]{7,20}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="penznemTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="HUF"/>
+            <xs:enumeration value="EUR"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="etelKategoriaTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="eloetel"/>
+            <xs:enumeration value="foetel"/>
+            <xs:enumeration value="desszert"/>
+            <xs:enumeration value="ital"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rendelesAllapotTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="felvett"/>
+            <xs:enumeration value="keszul"/>
+            <xs:enumeration value="teljesitve"/>
+            <xs:enumeration value="torolve"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ==================== SAJÁT KOMPLEX TÍPUSOK ==================== -->
+
+    <xs:complexType name="cimTipus">
+        <xs:sequence>
+            <xs:element name="iranyitoszam" type="xs:positiveInteger"/>
+            <xs:element name="varos" type="xs:string"/>
+            <xs:element name="utca" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="arTipus">
+        <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+                <xs:attribute name="penznem" type="penznemTipus" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="alkalmazottTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="munkakor" type="xs:string"/>
+            <xs:element name="belepesDatum" type="xs:date"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="idTipus" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="vendegTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="telefon" type="telefonTipus"/>
+            <xs:element name="email" type="emailTipus" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="idTipus" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="asztalTipus">
+        <xs:sequence>
+            <xs:element name="ferohely" type="xs:positiveInteger"/>
+            <xs:element name="elhelyezkedes" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="idTipus" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="etelTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="kategoria" type="etelKategoriaTipus"/>
+            <xs:element name="ar" type="arTipus"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="idTipus" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="foglalasTipus">
+        <xs:sequence>
+            <xs:element name="datum" type="xs:date"/>
+            <xs:element name="idopont" type="xs:time"/>
+            <xs:element name="letszam" type="xs:positiveInteger"/>
+            <xs:element name="vendegRef" type="idTipus"/>
+            <xs:element name="asztalRef" type="idTipus"/>
+            <xs:element name="alkalmazottRef" type="idTipus" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="idTipus" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="tetelTipus">
+        <xs:sequence>
+            <xs:element name="etelRef" type="idTipus"/>
+            <xs:element name="mennyiseg" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rendelesTipus">
+        <xs:sequence>
+            <xs:element name="datum" type="xs:date"/>
+            <xs:element name="allapot" type="rendelesAllapotTipus"/>
+            <xs:element name="vendegRef" type="idTipus" minOccurs="0"/>
+            <xs:element name="asztalRef" type="idTipus"/>
+            <xs:element name="alkalmazottRef" type="idTipus"/>
+            <xs:element name="tetelek">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tetel" type="tetelTipus" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="idTipus" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="vendegloTipus">
+        <xs:sequence>
+            <xs:element name="nev" type="xs:string"/>
+            <xs:element name="cim" type="cimTipus"/>
+            <xs:element name="telefon" type="telefonTipus"/>
+            <xs:element name="email" type="emailTipus"/>
+
+            <xs:element name="alkalmazottak">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="alkalmazott" type="alkalmazottTipus" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="vendegek">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="vendeg" type="vendegTipus" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="asztalok">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="asztal" type="asztalTipus" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="menu">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="etel" type="etelTipus" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="foglalasok" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="foglalas" type="foglalasTipus" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="rendelesek" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="rendeles" type="rendelesTipus" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="idTipus" use="required"/>
+    </xs:complexType>
+
+    <!-- ==================== GYÖKÉRELEM ÉS KULCSOK ==================== -->
+
+    <xs:element name="A6I2XW_Vendeglatas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vendeglok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="vendeglo" type="vendegloTipus" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!-- Elsődleges kulcsok -->
+        <xs:key name="vendegloKulcs">
+            <xs:selector xpath="vendeglok/vendeglo"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:key name="alkalmazottKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/alkalmazottak/alkalmazott"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:key name="vendegKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/vendegek/vendeg"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:key name="asztalKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/asztalok/asztal"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:key name="etelKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/menu/etel"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:key name="foglalasKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/foglalasok/foglalas"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:key name="rendelesKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/rendelesek/rendeles"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <!-- Kulcsreferenciák -->
+        <xs:keyref name="foglalasVendegRef" refer="vendegKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/foglalasok/foglalas"/>
+            <xs:field xpath="vendegRef"/>
+        </xs:keyref>
+
+        <xs:keyref name="foglalasAsztalRef" refer="asztalKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/foglalasok/foglalas"/>
+            <xs:field xpath="asztalRef"/>
+        </xs:keyref>
+
+        <xs:keyref name="foglalasAlkalmazottRef" refer="alkalmazottKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/foglalasok/foglalas"/>
+            <xs:field xpath="alkalmazottRef"/>
+        </xs:keyref>
+
+        <xs:keyref name="rendelesVendegRef" refer="vendegKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/rendelesek/rendeles"/>
+            <xs:field xpath="vendegRef"/>
+        </xs:keyref>
+
+        <xs:keyref name="rendelesAsztalRef" refer="asztalKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/rendelesek/rendeles"/>
+            <xs:field xpath="asztalRef"/>
+        </xs:keyref>
+
+        <xs:keyref name="rendelesAlkalmazottRef" refer="alkalmazottKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/rendelesek/rendeles"/>
+            <xs:field xpath="alkalmazottRef"/>
+        </xs:keyref>
+
+        <xs:keyref name="rendelesEtelRef" refer="etelKulcs">
+            <xs:selector xpath="vendeglok/vendeglo/rendelesek/rendeles/tetelek/tetel"/>
+            <xs:field xpath="etelRef"/>
+        </xs:keyref>
+
+    </xs:element>
+
+</xs:schema>
