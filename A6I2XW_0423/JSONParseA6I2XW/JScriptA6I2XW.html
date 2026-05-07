@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>JScriptA6I2XW</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            padding: 30px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            border-radius: 14px;
+            padding: 26px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+        }
+        h1 {
+            color: #1d4ed8;
+            text-align: center;
+        }
+        .ora {
+            border: 1px solid #dbeafe;
+            border-left: 6px solid #1d4ed8;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 16px;
+            background: #f9fafb;
+        }
+        .mezo {
+            font-weight: bold;
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+
+<input type="file" id="jsonFile" accept=".json">
+<div id="content"></div>
+
+<script>
+document.getElementById("jsonFile").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        const data = JSON.parse(e.target.result);
+        const orak = data.A6I2XW_orarend.ora;
+
+        let output = "";
+
+        orak.forEach(ora => {
+            output += `
+                <p><b>ID:</b> ${ora["@id"]}</p>
+                <p><b>Típus:</b> ${ora["@tipus"]}</p>
+                <p><b>Kurzus:</b> ${ora.kurzus}</p>
+                <p><b>Nap:</b> ${ora.idopont.nap}</p>
+                <p><b>Idő:</b> ${ora.idopont.tol} - ${ora.idopont.ig}</p>
+                <p><b>Helyszín:</b> ${ora.helyszin}</p>
+                <p><b>Oktató:</b> ${ora.oktato}</p>
+                <p><b>Szak:</b> ${ora.szak}</p>
+                <hr>
+            `;
+        });
+
+        document.getElementById("content").innerHTML = output;
+    };
+
+    reader.readAsText(file);
+});
+</script>
+</body>
+</html>

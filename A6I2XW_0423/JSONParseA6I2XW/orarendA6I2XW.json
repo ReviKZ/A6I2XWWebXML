@@ -1,0 +1,71 @@
+{
+    "A6I2XW_orarend": {
+        "ora": [
+            {
+                "@id": "ora01",
+                "@tipus": "gyakorlat",
+                "kurzus": "Webkönyvtárak",
+                "idopont": {
+                    "nap": "03.24.",
+                    "tol": "09:00",
+                    "ig": "12:05"
+                },
+                "helyszin": "-",
+                "oktato": "Dr. Patonay Anita",
+                "szak": "Programtervező informatikus"
+            },
+            {
+                "@id": "ora02",
+                "@tipus": "elmélet",
+                "kurzus": "Valószínűségszámítás és statisztika",
+                "idopont": {
+                    "nap": "03.25.",
+                    "tol": "08:00",
+                    "ig": "11:15"
+                },
+                "helyszin": "Tanterem 116",
+                "oktato": "Kucsinka Katalin",
+                "szak": "Programtervező informatikus"
+            },
+            {
+                "@id": "ora03",
+                "@tipus": "gyakorlat",
+                "kurzus": "Alkalmazások fejleszése projekt labor III.",
+                "idopont": {
+                    "nap": "03.26.",
+                    "tol": "10:00",
+                    "ig": "12:55"
+                },
+                "helyszin": "Informatikaterem 132",
+                "oktato": "Perlaki Attila",
+                "szak": "Programtervező informatikus"
+            },
+            {
+                "@id": "ora04",
+                "@tipus": "gyakorlat",
+                "kurzus": "Webkönyvtárak",
+                "idopont": {
+                    "nap": "03.26.",
+                    "tol": "11:30",
+                    "ig": "12:55"
+                },
+                "helyszin": "Informatikaterem 124",
+                "oktato": "Dr. Bednarik László",
+                "szak": "Programtervező informatikus"
+            },
+            {
+                "@id": "ora05",
+                "@tipus": "elmélet",
+                "kurzus": "Szoftverjog és biztonságtechnika",
+                "idopont": {
+                    "nap": "03.27.",
+                    "tol": "09:00",
+                    "ig": "12:05"
+                },
+                "helyszin": "-",
+                "oktato": "Dr. Mileff Péter",
+                "szak": "Programtervező informatikus"
+            }
+        ]
+    }
+}
