@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="orarendA6I2XW.xsl"?>
+
+<A6I2XW_orarend>
+    <ora id="ora01" tipus="gyakorlat">
+        <kurzus>Webkönyvtárak</kurzus>
+        <idopont>
+            <nap>03.24.</nap>
+            <tol>09:00</tol>
+            <ig>12:05</ig>
+        </idopont>
+        <helyszin>-</helyszin>
+        <oktato>Dr. Patonay Anita</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="ora02" tipus="elmélet">
+        <kurzus>Valószínűségszámítás és statisztika</kurzus>
+        <idopont>
+            <nap>03.25.</nap>
+            <tol>08:00</tol>
+            <ig>11:15</ig>
+        </idopont>
+        <helyszin>Tanterem 116</helyszin>
+        <oktato>Kucsinka Katalin</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="ora03" tipus="gyakorlat">
+        <kurzus>Alkalmazások fejleszése projekt labor III.</kurzus>
+        <idopont>
+            <nap>03.26.</nap>
+            <tol>10:00</tol>
+            <ig>12:55</ig>
+        </idopont>
+        <helyszin>Informatikaterem 132</helyszin>
+        <oktato>Perlaki Attila</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="ora04" tipus="gyakorlat">
+        <kurzus>Webkönyvtárak</kurzus>
+        <idopont>
+            <nap>03.26.</nap>
+            <tol>11:30</tol>
+            <ig>12:55</ig>
+        </idopont>
+        <helyszin>Informatikaterem 124</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="ora05" tipus="elmélet">
+        <kurzus>Szoftverjog és biztonságtechnika</kurzus>
+        <idopont>
+            <nap>03.27.</nap>
+            <tol>09:00</tol>
+            <ig>12:05</ig>
+        </idopont>
+        <helyszin>-</helyszin>
+        <oktato>Dr. Mileff Péter</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+</A6I2XW_orarend>
